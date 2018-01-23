@@ -15,12 +15,26 @@
 <hr>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>-->
-<app-header></app-header>
+
+<!---Course project start-->
+<!--<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <app-recipes></app-recipes>
       <app-shopping-list></app-shopping-list>
+    </div>
+  </div>
+</div>-->
+<!---Course project end-->
+
+
+<div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)" (bluePrintCreated)="onBlueprintAdded($event)"></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let  serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
     </div>
   </div>
 </div>
